@@ -1,0 +1,38 @@
+// Add event listeners to the navigation links
+const navLinks = document.querySelectorAll('.navbar a');
+
+navLinks.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = e.target.getAttribute('href');
+    document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// Add event listeners to the buttons
+const buttons = document.querySelectorAll('.btn-1, .btn-2');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+    // Add your button click logic here
+  });
+});
+
+// Add event listener to the contact form submit button
+const contactForm = document.querySelector('.contact-form form');
+
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  // Add your form submission logic here
+});
+
+// Add event listener to the social media links
+const socialLinks = document.querySelectorAll('.footer .social a');
+
+socialLinks.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    // Add your social media link click logic here
+  });
+});
